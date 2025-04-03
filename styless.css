@@ -1,0 +1,87 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+}
+
+.background {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.speech-bubble {
+    background: #002b5b;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.cta-button {
+    background: #ff0000;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #001f3f;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.promo-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.promo-banner, .console-banner {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ads img {
+    width: 100px;
+}

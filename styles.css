@@ -1,0 +1,97 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    background-image: url('fondo1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+}
+
+.background {
+    display: none; 
+}
+
+.speech-bubble {
+    background: #002b5b;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.cta-button {
+    display: inline-block;
+    font-size: 24px;
+    padding: 15px 30px;
+    background: #ff0000;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 350px;
+    margin-left: 250px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #001f3f;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.promo-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.promo-banner, .console-banner {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ads img {
+    width: 100px;
+}
+
+.character {
+    position: absolute;
+    right: 20px;
+    bottom: -400px; /* Ajusta para moverlo más abajo */
+    max-width: 800px; /* Aumenta el tamaño del personaje */
+    z-index: 1;
+}
