@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRUBYES GAMESHOP - Inicio de Sesión</title>
+    <title>GRUBYES GAMESHOP - Registro</title>
     <link rel="stylesheet" href="stylos.css">
 </head>
 <body>
@@ -27,44 +27,32 @@
 
     <main>
         <div class="login-section">
-            <h1>Inicia sesión o <br> Regístrate </h1> 
+            <h1>Registrarse</h1>
         </div>
 
         <div class="login-container">
-            <form id="form-login">
+            <form>
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" required>
+
                 <label for="email">Correo Electrónico</label>
                 <input type="email" id="email" required>
 
-                <label for="password">Contraseña:</label>
+                <label for="password">Contraseña</label>
                 <input type="password" id="password" required>
 
-                <a href="#">¿Olvidaste tu contraseña?</a>
-
                 <div class="buttons">
-                    <button type="submit" class="btn">Iniciar</button>
-                    <button type="button" class="btn" id="btn-registrar">Registrarte</button>
+                    <button type="submit" class="btn">Registrarte</button>
                     <button type="button" class="btn" id="btn-regresar">Regresar</button>
                 </div>
             </form>
         </div>
     </main>
 
-    <!-- JavaScript -->
     <script>
-        // Redirige al hacer login (simulación)
-        document.getElementById('form-login').addEventListener('submit', function (e) {
-            e.preventDefault(); // Evita el envío real del formulario
-            window.location.href = 'compras.html'; // Página después del login
-        });
-
-        // Botón de Registrarte
-        document.getElementById('btn-registrar').addEventListener('click', function () {
-            window.location.href = 'registro.html'; // Página de registro
-        });
-
         // Botón de Regresar
         document.getElementById('btn-regresar').addEventListener('click', function () {
-            window.location.href = 'compras.html'; // Página principal o inicio
+            window.location.href = 'iniciar_sesion.html';
         });
     </script>
 </body>

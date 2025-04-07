@@ -7,40 +7,32 @@ body, h1, h2, h3, p, ul, li, a {
     font-family: Arial, sans-serif;
 }
 
+/* Fondo general de la página */
 body {
-    background-color: #000;
-    color: #fff;
-}
-
-.container {
-    position: relative;
-}
-
-.background {
-    background-image: url('background-image.jpg');
+    background-image: url('Fondo3.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
-    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo oscuro para mejor lectura */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    position: absolute;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
 }
 
-.speech-bubble {
-    background: #002b5b;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 24px;
-}
-
-.cta-button {
-    background: #ff0000;
-    padding: 10px 20px;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
+/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -69,19 +61,96 @@ body {
     color: #fff;
 }
 
+/* Promo */
 .promo-section {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.promo-banner, .console-banner {
+.promo-banner,
+.console-banner {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
 
-.ads img {
-    width: 100px;
+.promo-banner img,
+.console-banner img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
 }
+
+.ads {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.ads img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Sección de juegos */
+.games-section {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    overflow-x: auto;
+    background-color: #001a33;
+}
+
+.game-card {
+    background-color: #0a1f3c;
+    border-radius: 10px;
+    width: 200px;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-info {
+    padding: 15px;
+    color: #fff;
+}
+
+.game-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.region {
+    font-size: 12px;
+    color: #1db954;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.likes {
+    font-size: 12px;
+    color: #ccc;
+}
+

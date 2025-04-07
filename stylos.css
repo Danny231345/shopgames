@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: Arial, sans-serif;
 }
 
 /* Encabezado */
@@ -132,3 +133,50 @@ nav ul li .active {
     background: darkblue;
 }
 
+/* Diseño responsivo para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .login-section {
+        font-size: 24px;
+        text-align: center;
+        margin: 30px 0 10px 0;
+    }
+
+    .login-container {
+        position: static;
+        transform: none;
+        width: 90%;
+        margin: 0 auto 40px auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

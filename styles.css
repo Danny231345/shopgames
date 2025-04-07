@@ -7,6 +7,7 @@ body, h1, h2, h3, p, ul, li, a {
     font-family: Arial, sans-serif;
 }
 
+/* Fondo general */
 body {
     background-color: #000;
     color: #fff;
@@ -16,82 +17,133 @@ body {
     background-attachment: fixed;
 }
 
+/* Contenedor principal */
 .container {
     position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Contenido centrado */
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ocultar fondo adicional si no se usa */
 .background {
-    display: none; 
+    display: none;
 }
 
+/* TÍTULO ANIMADO */
+.title-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 40px;
+    opacity: 0;
+}
+
+/* BURBUJA AZUL DE MENSAJE */
 .speech-bubble {
     background: #002b5b;
     padding: 20px;
     border-radius: 10px;
     font-size: 24px;
+    margin: 20px auto;
+    width: fit-content;
+    text-align: center;
 }
 
+/* BOTÓN DE CTA */
 .cta-button {
-    display: inline-block;
     font-size: 24px;
     padding: 15px 30px;
     background: #ff0000;
     color: white;
     border-radius: 10px;
     font-weight: bold;
-    margin-top: 350px;
-    margin-left: 250px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    opacity: 0;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #001f3f;
-    padding: 15px 30px;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.search-bar {
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-}
-
-.navbar ul {
-    display: flex;
-    gap: 20px;
-}
-
-.navbar a {
-    color: #fff;
-}
-
-.promo-section {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.promo-banner, .console-banner {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.ads img {
-    width: 100px;
-}
-
+/* IMAGEN DEL PERSONAJE */
 .character {
     position: absolute;
     right: 20px;
-    bottom: -400px; /* Ajusta para moverlo más abajo */
-    max-width: 800px; /* Aumenta el tamaño del personaje */
+    bottom: 0;
+    max-width: 600px;
     z-index: 1;
+    opacity: 0;
 }
+
+/* Ocultar por defecto */
+.hidden {
+    opacity: 0;
+}
+
+/* ANIMACIÓN ENTRADA DEL PERSONAJE */
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideInFromBottom 1s ease-out forwards;
+}
+
+/* ANIMACIÓN BOTÓN */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* ANIMACIÓN TÍTULO DESDE ARRIBA */
+@keyframes fadeInTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fade-in-top {
+    animation: fadeInTop 1s ease-out forwards;
+}
+
+/* EFECTO DE FLOTAR EN PERSONAJE */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+

@@ -11,11 +11,22 @@
         <div class="background"></div>
         <div class="content">
             <div class="speech-bubble">
-                <span style="color:#fff; font-weight:bold;">GRUBYES GAMESHOP</span><span class="highlight"></span><br>
+                <span style="color:#fff; font-weight:bold;">GRUBYES GAMESHOP</span>
             </div>
-            <img src="personaje 1.png" alt="Character" class="character">
-            <a href="compras.html" class="cta-button">Comprar Ahora</a>
+            <img src="personaje 1.png" alt="Character" class="character hidden" id="character">
+            <a href="compras.html" class="cta-button hidden" id="ctaBtn">Comprar Ahora</a>
         </div>
     </div>
+
+    <script>
+        // Animar elementos al cargar
+        window.addEventListener('DOMContentLoaded', () => {
+            const character = document.getElementById('character');
+            const ctaBtn = document.getElementById('ctaBtn');
+
+            character.classList.add('slide-in');
+            ctaBtn.classList.add('fade-in');
+        });
+    </script>
 </body>
 </html>
